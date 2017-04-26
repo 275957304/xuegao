@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0, width=device-width">
+<meta name="screen-orientation" content="portrait">
+<title>天上真的掉雪糕啦！</title>
+<link rel="stylesheet" type="text/css" href="static/css/index.css">
+<script src="static/js/zepto.min.js"></script>
+</head>
+<body>
+
+<div id="startGame" class="start">
+    <div class="logo"><img width="100%" src="static/img/logo.png" alt=""></div>
+    <div class="title"><img width="100%" src="static/img/title.png" alt=""></div>
+    <div id="guidePanel"><img width="100%" src="static/img/start.png" alt=""></div>
+    <div class="figure"><img width="100%" src="static/img/figure.png" alt=""></div>
+</div>
+
+<div id="gamepanel">
+	<div class="score-wrap">
+        <p class="time">剩余时间<span id="time">30</span>秒</p>
+        你的雪糕<span id="score">0</span>个
+    </div>
+	<canvas id="stage"></canvas>
+</div>
+<div id="gameoverPanel"></div>
+<div id="resultPanel">
+    <div class="resultBox">
+        <img width="100%" src="static/img/win_bg.png" alt="">
+        <div class="resultText">
+            <div class="text">您此番抢到雪糕<b id="sscore" style="color:red">0</b>个<br>今日还有无限次机会</div>
+            <a href="javascript:void(0)" class="replay"><img width="100%" src="static/img/replay.png" alt=""></a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $("#gamepanel").height($(document).height());
+    var canvas = document.getElementById('stage');
+    canvas.width = $(document).width();
+    canvas.height = $(document).height();
+</script>
+<script src="static/js/index.js"></script>
+</body>
+</html>
